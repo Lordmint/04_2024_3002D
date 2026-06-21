@@ -13,7 +13,7 @@ public class StudentInfo {
         String indexNumber = input.nextLine();
 
         System.out.print("Enter Age: ");
-        int age = Integer.parseInt(input.nextLine());
+        byte age = Byte.parseByte(input.nextLine());
 
         System.out.print("Enter Gender (M/F): ");
         char gender = input.nextLine().charAt(0);
@@ -22,10 +22,10 @@ public class StudentInfo {
         String department = input.nextLine();
 
         System.out.print("Enter Level (e.g. 100, 200, 300): ");
-        int level = Integer.parseInt(input.nextLine());
+        short level = Short.parseShort(input.nextLine());
 
         System.out.print("Enter GPA: ");
-        double gpa = Double.parseDouble(input.nextLine());
+        float gpa = Float.parseFloat(input.nextLine());
 
         // ----- 2. Determine Adult Status -----
         boolean isAdult = age >= 18;
@@ -33,11 +33,11 @@ public class StudentInfo {
 
         // ----- 3. Determine Academic Classification -----
         String academicClass;
-        if (gpa >= 3.5 && gpa <= 4.0) {
+        if (gpa >= 3.5f && gpa <= 4.0f) {
             academicClass = "First Class";
-        } else if (gpa >= 3.0 && gpa < 3.5) {
+        } else if (gpa >= 3.0f && gpa < 3.5f) {
             academicClass = "Second Class Upper";
-        } else if (gpa >= 2.5 && gpa < 3.0) {
+        } else if (gpa >= 2.5f && gpa < 3.0f) {
             academicClass = "Second Class Lower";
         } else {
             academicClass = "Pass";
